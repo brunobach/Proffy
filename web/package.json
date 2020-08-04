@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "proffy-nlw",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +12,7 @@
     "@types/react-dom": "^16.9.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "typescript": "~3.7.2"
   },
@@ -35,5 +36,24 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "Proffy é uma plataforma de estudos online, onde será possível conectar aluno-professor. Poderão ser agendados horários para estudos junto ao calendário disponibilizado pelo professor.",
+  "main": "index.tsx",
+  "devDependencies": {
+    "@types/react-router-dom": "^5.1.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunobach/Proffy.git"
+  },
+  "keywords": [
+    "nlw"
+  ],
+  "author": "Bruno Bach",
+  "Linkedin": "https://www.linkedin.com/in/bruno-bach/",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunobach/Proffy/issues"
+  },
+  "homepage": "https://github.com/brunobach/Proffy#readme"
 }
