@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "Proffy é uma plataforma de estudos online, onde será possível conectar aluno-professor. Poderão ser agendados horários para estudos junto ao calendário disponibilizado pelo professor.",
     "scripts": {
-      "build": "cd web && npm run build"
+      "build": "cd web && npm install && npm run build"
     },
     "repository": {
       "type": "git",
