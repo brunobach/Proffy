@@ -111,7 +111,7 @@ export default class ConnectionsController {
         success: "Class create with success",
       });
 
-      // Aqui fechamos o 'try' e chamamos o chatch que vai expor se deu erro.
+      // Aqui fechamos o 'try' e chamamos o catch que vai expor se deu erro.
     } catch (e) {
       // desfaz qualquer alteração no banco
       await trx.rollback();

@@ -2,11 +2,11 @@ import Knex from 'knex';
 
 export async function up(knex: Knex) {
   return knex.schema.createTable('connections', (table) => {
-    table.increments('id').primary(); // id da conexão
+    table.increments('id').primary(); 
        
     table
-      .integer('user_id').notNullable() // id do professor
-      .references('id').inTable('users') // relacionamento com a tabela users
+      .integer('user_id').notNullable() 
+      .references('id').inTable('users') 
       .onUpdate('CASCADE')
       .onDelete('CASCADE');
     
