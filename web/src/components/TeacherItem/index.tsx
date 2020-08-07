@@ -1,37 +1,58 @@
-import React from 'react';
+import React from "react";
+import whatsappIcon from "../../assets/images/icons/whatsapp.svg";
+import "./styles.css";
+import api from "../../services/api";
 
-import './styles.css';
+export interface Teacher {
+  avatar: string;
+  bio: string;
+  cost: number;
+  id: number;
+  name: string;
+  subject: string;
+  whatsapp: string;
+}
 
-import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
+interface TeacherItemProps {
+  teacher: Teacher;
+}
 
-function TeacherItem() {
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+  function createNewConnection() {
+    api.post("connections", {
+      user_id: teacher.id,
+    });
+  }
+
   return (
     <article className="teacher-item">
       <header>
-        <img src="https://avatars0.githubusercontent.com/u/42494225?s=460&u=9ac9e5fdec30c7dea8afefd9917ee12cc356bad4&v=4" alt="Bruno Bach"/>
+        <img src={teacher.avatar} alt="Avatar" />
         <div>
-          <strong>Bruno Bach</strong>
-          <span>Matemática</span>
+          <strong>{teacher.name}</strong>
+          <span>{teacher.subject}</span>
         </div>
       </header>
-      <p>
-        Aulas de Matemática bem estruturadas e expositiva.
-        <br /> <br />
-        Estude para o ENEM e Vestibulares no Melhor Cursinho com o Melhor Preço. Pague em até 12x. ENEM com a melhor preparação. Parcelas por menos de R$ 15 reais. 
-      </p>
+
+      <p>{teacher.bio}</p>
 
       <footer>
         <p>
           Preço/hora
-          <strong>R$ 15,00</strong>
+          <strong>R$ {teacher.cost}</strong>
         </p>
-        <button type="button">
-          <img src={whatsappIcon} alt="Whatsapp"/>
-          Entrar em Contato
-        </button>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          onClick={createNewConnection}
+          href={`https://wa.me/${teacher.whatsapp}`}
+        >
+          <img src={whatsappIcon} alt="Whatsapp" />
+          Entrar em contato
+        </a>
       </footer>
     </article>
   );
-}
+};
 
 export default TeacherItem;

@@ -1,5 +1,3 @@
-
-
 .teacher-item {
   background: var(--color-box-base);
   border: 1px solid var(--color-line-in-white);
@@ -30,7 +28,7 @@
   color: var(--color-text-title);
 }
 
-.teacher-item header span {
+.teacher-item header div span {
   font-size: 1.6rem;
   display: block;
   margin-top: 0.4rem;
@@ -58,7 +56,7 @@
   display: block;
 }
 
-.teacher-item footer button {
+.teacher-item footer a {
   width: 20rem;
   height: 5.6rem;
   background: var(--color-secundary);
@@ -71,9 +69,10 @@
   align-items: center;
   justify-content: space-evenly;
   transition: 0.2s;
+  text-decoration: none;
 }
 
-.teacher-item footer button:hover {
+.teacher-item footer a:hover {
   background: var(--color-secundary-dark);
 }
 
