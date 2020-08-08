@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
@@ -9,16 +9,17 @@ const styles = StyleSheet.create({
     },
 
     content: {
-        flex: 1,
-        justifyContent: 'center'
+        flex: 1, // ocupar o maximo do tamanho
+        justifyContent: 'center',
+        resizeMode: 'contain', // leve reduzida
     },
 
     title: {
         fontFamily: 'Archivo_700Bold',
-        color: '#FFF',
+        color: '#fff',
         fontSize: 32,
         lineHeight: 37,
-        maxWidth: 187,
+        maxWidth: 180,
     },
 
     description: {
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         lineHeight: 26,
         fontFamily: 'Poppins_400Regular',
-        maxWidth: 240
+        maxWidth: 240,
     },
 
     okButton: {
@@ -36,14 +37,17 @@ const styles = StyleSheet.create({
         height: 58,
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: 8
+        borderRadius: 8,
     },
 
     okButtonText: {
-        color: '#FFF',
+        color: '#fff',
         fontSize: 16,
-        fontFamily: 'Archivo_700Bold'
-    }
-});
+        fontFamily: 'Archivo_700Bold',
+
+    },
+
+
+})
 
 export default styles;

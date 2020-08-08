@@ -3,28 +3,34 @@ import { View, ImageBackground, Text } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 
-import giveClassesBgImage from '../../assets/images/give-classes-background.png';
+import giveClassesBackground from '../../assets/images/give-classes-background.png';
 
 import styles from './styles';
 
-function GiveClasses() {
-    const { goBack } = useNavigation();
 
+
+function GiveClasses () {
+    const { goBack } = useNavigation(); 
+
+    // voltar tela anterior 
     function handleNavigateBack() {
-        goBack();
+        goBack()
     }
 
     return (
         <View style={styles.container}>
-            <ImageBackground
-                resizeMode="contain"
-                source={giveClassesBgImage}
+            <ImageBackground 
+                resizeMode="contain" 
+                source={giveClassesBackground} 
                 style={styles.content}
             >
-                <Text style={styles.title}>Quer ser um Proffyy?</Text>
-                <Text style={styles.description}>
-                    Para começar, você precisa se cadastrar como professor na nossa plataforma web.
-                </Text>
+            
+            <Text style={styles.title}>Quer ser um Proffy?</Text>
+
+            <Text style={styles.description}>
+                Para começar, você precisa se cadastrar como professor na nossa plataforma web.
+            </Text>
+
             </ImageBackground>
 
             <RectButton onPress={handleNavigateBack} style={styles.okButton}>

@@ -1,0 +1,86 @@
+#page-login {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--color-primary);
+}
+.page-login-logo {
+  background-image: url("../../assets/images/login.png");
+  background-position: 50%;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+.page-login-form form h2 {
+  font: 700 2.5rem Archivo;
+  color: var(--color-text-base);
+  margin-bottom: 10px;
+}
+.page-login-form {
+  width: 80vw;
+  height: 100vh;
+  background: var(--color-background);
+}
+
+.page-login-form form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30%;
+  margin-left: 25%;
+  width: 50%;
+  justify-self: center;
+  align-self: center;
+}
+
+.remember-password {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.remember-password label {
+    margin-right: 40px;
+    margin-left: -50px;
+    font: 400 1.8rem Archivo;
+    color: var(--color-text-base);
+}
+
+.remember-password a {
+    font: 400 1.8rem Archivo;
+    outline: 0;
+    color: var(--color-text-base);
+    text-decoration: none;
+}
+
+#remember-check {
+    width: 40px;
+    height: 20px;
+}
+
+
+
+.page-login-form form button {
+  height: 5.6rem;
+  border: 0;
+  border-radius: 0.8rem;
+  font: 700 1.6rem Archivo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  margin-top: 3.2rem;
+}
+
+.disabled {
+  background: var(--color-line-in-white);
+  color: var(--color-button-text);
+}
+
+.active {
+  background: var(--color-secundary);
+  color: var(--color-button-text);
+  cursor: pointer;
+}
